@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function ProductImage({ src, alt }) {
+export default function ProductImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="flex justify-center">
       <Image

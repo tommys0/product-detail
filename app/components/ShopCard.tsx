@@ -1,6 +1,13 @@
 "use client";
 
-export default function ShopCard({ shop, onClick }) {
+type Shop = {
+  shop_name: string;
+  price: number;
+  shopUrl: string;
+  delivery: number;
+};
+
+export default function ShopCard({ shop, onClick }: { shop: Shop; onClick: (shop: Shop) => void }) {
   return (
     <button
       onClick={() => onClick(shop)}

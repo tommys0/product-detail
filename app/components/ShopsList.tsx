@@ -2,7 +2,14 @@
 
 import ShopCard from "./ShopCard";
 
-export default function ShopsList({ shops, onShopClick }) {
+type Shop = {
+  shop_name: string;
+  price: number;
+  shopUrl: string;
+  delivery: number;
+};
+
+export default function ShopsList({ shops, onShopClick }: { shops: Shop[]; onShopClick: (shop: Shop) => void }) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
       <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">

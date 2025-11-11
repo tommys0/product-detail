@@ -4,8 +4,15 @@ import shopData from "./data.json";
 import ProductSection from "./components/ProductSection";
 import ShopsList from "./components/ShopsList";
 
+type Shop = {
+  shop_name: string;
+  price: number;
+  shopUrl: string;
+  delivery: number;
+};
+
 export default function Home() {
-  const handleShopClick = (shop) => {
+  const handleShopClick = (shop: Shop) => {
     alert(
       `Shop: ${shop.shop_name}\nPrice: $${shop.price}\nDelivery: $${shop.delivery}\nURL: ${shop.shopUrl}`,
     );

@@ -1,4 +1,4 @@
-export default function ProductInfo({ title, description, minPrice, shopCount }) {
+export default function ProductInfo({ title, description, minPrice, shopCount }: { title: string; description: string; minPrice: number; shopCount: number }) {
   return (
     <div className="space-y-6">
       <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
